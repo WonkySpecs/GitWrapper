@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <PackageId>GitWrapper</PackageId>
+    <PackageVersion>1.0.0</PackageVersion>
+    <Authors>Will Taylor</Authors>
+    <Company>STFC</Company>
+    <Description>A lightweight wrapper for git. Makes it easy to get information about git repositories in dotnet code, as long as the git executable is available on the path.</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <RepositoryUrl>https://github.com/WonkySpecs/GitWrapper</RepositoryUrl>
+  </PropertyGroup>
+</Project>
