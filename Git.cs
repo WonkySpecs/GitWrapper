@@ -3,7 +3,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 
-namespace gitdotnet
+namespace GitWrapper
 {
     public class Git
     {
