@@ -39,7 +39,7 @@ namespace GitWrapper
             p.Start();
             var res = p.StandardOutput.ReadToEnd();
             p.Close();
-            return res;
+            return res.Trim();
         }
     }
 }
