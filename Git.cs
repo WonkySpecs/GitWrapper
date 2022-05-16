@@ -7,11 +7,11 @@ namespace GitWrapper
 {
     public class Git
     {
-        private readonly string _gitDir;
+        private readonly string _repoDir;
 
         public Git(string repoDir)
         {
-            _gitDir = Path.Join(repoDir, ".git");
+            _repoDir = repoDir;
         }
 
         public string Status() => Run("status");
@@ -25,7 +25,12 @@ namespace GitWrapper
         {
             var command = string.Join(
                     " ",
-                    new List<string> { $"--git-dir=\"{_gitDir}\"" }.Concat(args));
+                    new List<string>
+                    {
+                        $"--git-dir=\"{Path.Join(_repoDir, ".git")}\"",
+                        $"--work-tree=\"{_repoDir}\"",
+                    }.Concat(args));
+
             var p = new Process()
             {
                 StartInfo = new ProcessStartInfo("git")
