@@ -21,6 +21,8 @@ namespace GitWrapper
 
         public string Branch() => Run("rev-parse", "--abbrev-ref", "HEAD");
 
+        public string Exec(string command) => Run(command);
+
         private string Run(params string[] args)
         {
             var command = string.Join(
