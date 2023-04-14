@@ -8,7 +8,7 @@
 
   <PropertyGroup>
     <PackageId>GitWrapper</PackageId>
-    <PackageVersion>1.1.0</PackageVersion>
+    <PackageVersion>1.1.1</PackageVersion>
     <Authors>Will Taylor</Authors>
     <Company>STFC</Company>
     <Description>A lightweight wrapper for git. Makes it easy to get information about git repositories in dotnet code, as long as the git executable is available on the path.</Description>
