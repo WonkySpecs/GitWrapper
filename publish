@@ -1,0 +1,7 @@
+#!/bin/bash
+
+[ -z "$1" ] && echo "Must supply version number" && exit 1;
+cd bin/Release;
+f="GitWrapper.$1.nupkg";
+[ ! -f $f ] && echo "$f does not exist in bin/Release. Update the csproj version and run dotnet pack first." && exit 1;
+dotnet nuget push  $f -k $(cat ~/.nuget-api-key) --source https://api.nuget.org/v3/index.json
